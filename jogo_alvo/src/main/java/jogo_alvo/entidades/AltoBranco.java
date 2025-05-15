@@ -9,7 +9,7 @@ public class AltoBranco extends Alvo{
     @Override
     public boolean acerta(int posX, int posY) {
         if (getPosX() == posX && getPosY() == posY) {
-            setQuantADestuir(getQuantADestuir() - 1);
+            setQuantADestuir(getQuantADestuir() + 1);
             return true;
         }
         return false;
