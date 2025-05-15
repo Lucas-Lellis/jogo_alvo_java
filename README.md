@@ -1,2 +1,2 @@
 # jogo_alvo_java
- jogo de tiro ao alvo em ajva
+Jogo de Tiro ao Alvo em Linguagem Java
