@@ -2,21 +2,21 @@ package jogo_alvo.entidades;
 
 public abstract class Alvo {
 
-    private static Integer quantADestuir = 3;
-    private Integer posX = 0;
-    private Integer posY = 0;
+    private Integer quantADestruir = 3;
+    private Integer posX;
+    private Integer posY;
 
     public Alvo(Integer posX, Integer posY) {
         this.posX = posX;
         this.posY = posY;
     }
 
-    public static Integer getQuantADestuir() {
-        return quantADestuir;
+    public Integer getQuantADestruir() {
+        return quantADestruir;
     }
 
-    public static void setQuantADestuir(Integer quantADestuir) {
-        Alvo.quantADestuir = quantADestuir;
+    public void setQuantADestruir(Integer quantADestruir) {
+        this.quantADestruir = quantADestruir;
     }
 
     public Integer getPosX() {
@@ -36,12 +36,12 @@ public abstract class Alvo {
     }
 
     public boolean igual(Alvo outro) {
-        return this.posX == outro.getPosX() && this.posY == outro.posY;
+        return this.posX == outro.getPosX() && this.posY == outro.getPosY();
     }
 
     @Override
     public String toString() {
-        return "Alvos na posição (" + posX + ", " + posY + ") ";
+        return "Alvo na posição (" + posX + ", " + posY + ") ";
     }
 
     public abstract boolean acerta(int posX, int posY);
