@@ -8,10 +8,16 @@ import java.util.*;
 
 public class Programa {
 
-    private List<Alvo> alvoList = new ArrayList<>();
-    private Scanner scan = new Scanner(System.in);
+    static List<Alvo> alvoList = new ArrayList<>();
+    static Scanner scan = new Scanner(System.in);
     private int tiros = 12;
-    Alvo alvo;
+    static Alvo alvo;
+
+    public static void main(String[] args) {
+        Programa programa = new Programa();
+        programa.iniciarJogo();
+        programa.atirar();
+    }
 
     public void iniciarJogo() {
         Random random = new Random();
@@ -73,11 +79,5 @@ public class Programa {
                 System.out.println("GAME OVER!");
             }
         }
-    }
-
-    public static void main(String[] args) {
-        Programa programa = new Programa();
-        programa.iniciarJogo();
-        programa.atirar();
     }
 }
